@@ -75,7 +75,7 @@ variable "iam_instance_profile" {
 
 variable "ec2_instance_names" {
   type        = set(string)
-  default     = ["ec2-1", "ec2-2", "ec2-3", "ec2-4", "ec2-5", "ec2-6"]
+  default     = ["ec2-1", "ec2-2", "ec2-3", "ec2-4", "ec2-5"]
   description = "Names for 6 EC2 instances."
 }
 
