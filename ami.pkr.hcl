@@ -30,10 +30,10 @@ variable "ssh_pkey_file" {
 
 # Run echo $HOME/.ssh/labsuser.pub to get the public key path
 variable "ssh_public_key_path" {
-  default = "/Users/yourname/.ssh/labsuser.pub"
+  default = "/Users/David/.ssh/labsuser.pub"
 }
 
-source "amazon-ebs" "amazonlinux" {
+source "amazon-ebs" "ubuntu" {
   ami_name            = var.ami_name
   instance_type       = var.instance_type
   region              = var.aws_region
@@ -56,6 +56,7 @@ source "amazon-ebs" "amazonlinux" {
 build {
   sources = ["source.amazon-ebs.ubuntu"]
 
+  # or apt-get
   provisioner "shell" {
     inline = [
       "sudo apt update -y",
