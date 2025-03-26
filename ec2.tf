@@ -5,11 +5,11 @@ resource "aws_security_group" "private_instances" {
   tags        = var.resource_tags
 
   ingress {
-      description     = "SSH from bastion"
-      from_port       = 22
-      to_port         = 22
-      protocol        = "tcp"
-      security_groups = [ module.bastion.security_group_id ]
+    description     = "SSH from bastion"
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
+    security_groups = [ module.bastion.security_group_id ]
   }
 
   # For docker swarm
