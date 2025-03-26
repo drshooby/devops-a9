@@ -81,6 +81,6 @@ variable "ec2_instance_names" {
 
 variable "packer_ami_id" {
   type        = string
-  default     = "ami-040c8fa007c9c9ed2"
+  default     = "ami-0d646b698153a2e0f"
   description = "AMI ID from Packer."
 }
